@@ -23,7 +23,7 @@ def variable_sort(*args) -> dict:
     for arg in args:
         if type(arg) in [int, float, tuple, str, bool]:
             immutable_list.append(arg)
-        elif type(arg) in [list, tuple, set, frozenset, dict]:
+        elif type(arg) in [list, set, dict]:
             mutable_list.append(arg)
 
     return {"mutable": mutable_list, "immutable": immutable_list}
